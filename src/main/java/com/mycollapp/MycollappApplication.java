@@ -18,11 +18,18 @@ public class MycollappApplication {
     @Bean
     public CommandLineRunner commmandLineRunner(StudentDao studentDao) {
         return runner -> {
-//            createStudent(studentDao);
+
+            createStudent(studentDao);
 //            getStudentById(studentDao, 2);
 //            getAllStudents(studentDao);
-            updateStudent(studentDao, 4);
+//            updateStudent(studentDao, 4);
+//            deleteStudentById(studentDao, 4);
         };
+    }
+
+    private void deleteStudentById(StudentDao studentDao, int i) {
+        System.out.println("Deleting student with ID: " + i);
+        studentDao.deleteById(i);
     }
 
     private void getAllStudents(StudentDao studentDao) {
