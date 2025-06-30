@@ -3,8 +3,8 @@ package com.mycollapp.entity;
 import jakarta.persistence.*;
 
 @Entity
-@Table(name = "student")
-public class Student {
+@Table(name = "employee")
+public class Employee {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
@@ -18,10 +18,10 @@ public class Student {
     @Column(name = "email")
     private String email;
 
-    public Student() {
+    public Employee() {
     }
 
-    public Student( String firstName, String lastName, String email) {
+    public Employee(String firstName, String lastName, String email) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.email = email;
